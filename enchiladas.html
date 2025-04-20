@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchiladas - Recette traditionnelle mexicaine</title>
+    <style>
+        /* Reset et styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* En-tête */
+        header {
+            background-color: #c12b2b;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, #c12b2b, #e67e22);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .nutri-score {
+            display: inline-block;
+            background-color: white;
+            color: #333;
+            padding: 0.3rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        /* Conteneur principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Section de présentation */
+        .recipe-presentation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .recipe-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .recipe-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 3px solid #e67e22;
+        }
+        
+        .recipe-description {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 5px solid #c12b2b;
+        }
+        
+        /* Section ingrédients */
+        .ingredients-section {
+            margin-bottom: 2rem;
+        }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .ingredient-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 3px solid #e67e22;
+        }
+        
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ingredient-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .ingredient-info {
+            padding: 1rem;
+        }
+        
+        .ingredient-name {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #c12b2b;
+        }
+        
+        /* Section préparation */
+        .preparation-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-left: 5px solid #e67e22;
+        }
+        
+        .steps-list {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+        
+        .steps-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+        }
+        
+        /* Pied de page */
+        footer {
+            background: linear-gradient(to right, #c12b2b, #e67e22);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .recipe-presentation {
+                flex-direction: column;
+            }
+            
+            .ingredients-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Enchiladas Mexicanas</h1>
+        <p class="subtitle">La recette authentique du Mexique</p>
+        <div class="nutri-score"></div>
+    </header>
+    
+    <div class="container">
+        <!-- Présentation de la recette -->
+        <section class="recipe-presentation">
+            <div class="recipe-image">
+                <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Enchiladas">
+            </div>
+            <div class="recipe-description">
+                <h2>Les Enchiladas</h2>
+                <p>Les enchiladas sont un plat traditionnel mexicain composé de tortillas de maïs enroulées et garnies de divers ingrédients, recouvertes d'une sauce piquante. Le nom "enchilada" vient du verbe espagnol "enchilar" qui signifie "ajouter du piment".</p>
+                <p>Cette recette vous propose une version classique avec poulet et sauce tomate épicée, mais vous pouvez adapter les garnitures selon vos goûts.</p>
+            </div>
+        </section>
+        
+        <!-- Ingrédients -->
+        <section class="ingredients-section">
+            <h2>Ingrédients (pour 4 personnes)</h2>
+            <div class="ingredients-grid">
+                <!-- Ingrédient 1 -->
+                <div class="ingredient-card">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tortillas" class="ingredient-img">
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">Tortillas de maïs</div>
+                        <div>8 tortillas</div>
+                        <div class="nutri-score"></div>
+                    </div>
+                </div>
+                
+                <!-- Ingrédient 2 -->
+                <div class="ingredient-card">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Poulet" class="ingredient-img">
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">Poulet</div>
+                        <div>400g de blanc de poulet</div>
+                        <div class="nutri-score"></div>
+                    </div>
+                </div>
+                
+                <!-- Ingrédient 3 -->
+                <div class="ingredient-card">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e1ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tomates" class="ingredient-img">
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">Tomates</div>
+                        <div>4 tomates bien mûres</div>
+                        <div class="nutri-score"></div>
+                    </div>
+                </div>
+                
+                <!-- Ingrédient 4 -->
+                <div class="ingredient-card">
+                    <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Oignons" class="ingredient-img">
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">Oignons</div>
+                        <div>2 oignons rouges</div>
+                        <div class="nutri-score"></div>
+                    </div>
+                </div>
+                
+                <!-- Ingrédient 5 -->
+                <div class="ingredient-card">
+                    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Piments" class="ingredient-img">
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">Piments</div>
+                        <div>2 piments jalapeños</div>
+                        <div class="nutri-score"></div>
+                    </div>
+                </div>
+                
+                <!-- Ingrédient 6 -->
+                <div class="ingredient-card">
+                    <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Fromage" class="ingredient-img">
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">Fromage</div>
+                        <div>150g de fromage râpé</div>
+                        <div class="nutri-score"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Préparation -->
+        <section class="preparation-section">
+            <h2>Préparation</h2>
+            <ol class="steps-list">
+                <li><strong>Préparation de la sauce :</strong> Dans une poêle, faites revenir 1 oignon émincé avec de l'ail. Ajoutez les tomates coupées en dés et les piments épépinés et hachés. Laissez mijoter 15 minutes puis mixez pour obtenir une sauce lisse.</li>
+                <li><strong>Cuisson du poulet :</strong> Faites cuire les blancs de poulet dans une poêle avec un peu d'huile. Une fois cuit, effilochez-le à la fourchette.</li>
+                <li><strong>Préchauffez votre four</strong> à 180°C (thermostat 6).</li>
+                <li><strong>Montage des enchiladas :</strong> Trempez brièvement chaque tortilla dans la sauce tomate pour l'assouplir. Garnissez-la de poulet effiloché et d'un peu d'oignon cru émincé. Roulez la tortilla et placez-la dans un plat à gratin.</li>
+                <li><strong>Finalisation :</strong> Répétez l'opération pour toutes les tortillas. Recouvrez le tout de sauce restante et parsemez de fromage râpé.</li>
+                <li><strong>Cuisson :</strong> Enfournez pour 15-20 minutes jusqu'à ce que le fromage soit bien fondu et légèrement gratiné.</li>
+                <li><strong>Service :</strong> Servez chaud, accompagné de crème fraîche, d'avocat et de coriandre fraîche.</li>
+            </ol>
+        </section>
+    </div>
+    
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2025 Recette des Enchiladas - Tous droits réservés</p>
+        <p>¡Viva México! - D'autres recettes mexicaines sur notre site</p>
+    </footer>
+</body>
+</html>
